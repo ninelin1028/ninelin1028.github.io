@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script >
+  $(document).ready(function(){
+    $("#hide").click(function(){
+      $("ul.dropdown").hide();
+    });
+    $("#show").click(function(){
+      $("ul.dropdown").show();
+    });
+    $("ul.dropdown").css("color", "orange");
+   
+  });
+  </script>
 <style>
   .blue-text {
     color: rgb(98, 125, 243);
@@ -42,7 +56,9 @@
   <p class="blue-text">我的社群<a href="https://www.facebook.com/people/%E6%9E%97%E4%BA%AE%E5%A6%A4/100009526643264/" class="purple-text">Facebook</a></p>
   <div class="silver-background">
     <p>我的興趣:</p>
-    <ul>
+      <button class="btn btn-default target" id="show" >顯示資訊</button>
+      <button class="btn btn-default target" id="hide" >隱藏資訊</button>
+    <ul class="dropdown">
       <li>撲克牌遊戲</li>
       <li>聽音樂</li>
       <li>看電影</li>
